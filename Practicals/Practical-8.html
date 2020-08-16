@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-8</title>
+
+    <!-- FONT AWASOME LINK -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #header
+        {
+            width: 100%;
+            height: 80px;
+            background-color: gray;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            /* to fix the navbar */
+            position: fixed;
+            top: 0;
+        }
+        h1
+        {
+            text-align: center;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #content
+        {
+            margin-bottom: 15px;
+        }
+        #section1
+        {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(../images/bg.jpg);
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 70px;
+            font-weight: bold;
+            color: white;
+            background-position: center;
+        }
+        #section2
+        {
+            widows: 100vw;
+            height: 50vh;
+        }
+        .c1
+        {
+            border-radius: 50%;
+            background-image: url(../images/1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            width: 23%;
+            height: 100%;
+            margin-left: 15px;
+            margin-right: 11px;
+        }
+        .c2
+        {
+            border-radius: 50%;
+            background-image: url(../images/2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            width: 23%;
+            height: 100%;
+            margin-left: 15px;
+            margin-right: 11px;
+        }
+        .c3
+        {
+            border-radius: 50%;
+            background-image: url(../images/3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            width: 23%;
+            height: 100%;
+            margin-left: 15px;
+            margin-right: 11px;
+        }
+        .c4
+        {
+            border-radius: 50%;
+            background-image: url(../images/9.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            width: 23%;
+            height: 100%;
+            margin-left: 15px;
+            margin-right: 11px;
+        }
+        #section3
+        {
+            widows: 100vw;
+            height: 100vh;
+        }
+        #left-side
+        {
+            width:48%;
+            height: 100%;
+            background-color:grey;
+            text-align: justify;
+            padding-right: 10px;
+            padding-left: 10px;
+            color:white;
+            margin-right: 15px;
+            float: left;
+        }
+        #right-side
+        {
+            width:48.5%;
+            height: 100%;
+            float: left;
+        }
+        .a1
+        {
+            height: 32%;
+            margin-bottom: 13px;
+            width: 100%;
+            background-image: url(../images/p1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 30px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        .a2
+        {
+            height: 32%;
+            margin-bottom: 13px;
+            width: 100%;
+            background-image: url(../images/p2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 30px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        .a3
+        {
+            height: 32%;
+            margin-bottom: 13px;
+            width: 100%;
+            background-image: url(../images/p3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 30px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        #section4
+        {
+            widows: 100vw;
+            height: 50vh;
+        }
+        #footer
+        {
+            width: 100%;
+            height: 100px;
+            background-color:plum;
+            text-align: center;
+            color:black;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* CSS FOR NAVBAR */
+        ul
+        {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            width:100%;
+            margin: auto;
+
+            /* to distribute evenly all the list in the navbar */
+            display: flex;
+            justify-content:space-evenly;
+        }
+        ul li
+        {
+            display: inline-block;
+        }
+        ul li a 
+        {
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            color:white;
+
+            /* to set width the of each single items */
+            /* width: 250px; */
+            text-align: center;
+        }
+        ul li a:hover
+        {
+            background-color: blue;
+            color:black;
+        }
+
+
+
+        /* CSS FOR CARD LAYOUT */
+        .card
+        {
+            background-color:lightgrey;
+            border-radius: 10px;
+            width:20%;
+            float:left;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .images
+        {
+            width: 100%;
+            height: 160px;
+            border-radius: 10px;
+        }
+        h4
+        {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .discription
+        {
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .blockbutton
+        {
+            display:block;
+            color: white;
+            background-color: red;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .blockbutton:hover
+        {
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <a name ="top"></a>
+    <div class="container">
+        <div id="header">
+            <ul>
+                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+
+                <li><a href="#about"><i class="fa fa-globe" aria-hidden="true"></i> ABOUT US</a></li>
+
+                <li><a href="#team"><i class="fa fa-user-circle-o" aria-hidden="true"></i> TEAM</a></li>
+
+                <li><a href="#techno"><i class="fa fa-codepen" aria-hidden="true"></i> TECHNOLOGIES</a></li>
+
+                <li><a href="#contact"><i class="fa fa-phone-square" aria-hidden="true"></i> CONTACT</a></li>
+            </ul>
+        </div>
+        <br><br><br><br><br>
+        <div id="content">
+
+            <div id="section1">PRACTICAL-8</div>
+            
+            <br><br>
+            <a name ="team"></a>
+            <h1>Team Members</h1>
+            <br>
+            <div id="section2">
+                <div class="c1"></div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+                <div class="c4"></div>
+            </div>
+            <br><br><br>
+            <a name ="about"></a>
+            <h1>About Us</h1>
+            <br>
+            <div id="section3">
+                <div id="left-side">
+                    <h2>About Projects</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse illo tempore quos aliquid asperiores aut saepe obcaecati. Libero delectus quam rem asperiores debitis provident maiores, quas nostrum qui minus voluptates! Ipsa culpa incidunt exercitationem laudantium accusantium illo sunt reiciendis omnis aliquid voluptate eaque perspiciatis ipsam, cupiditate ut aut nostrum porro minima earum eveniet doloribus impedit, nihil labore! Officia atque eum dignissimos id molestiae itaque delectus maiores nulla, suscipit debitis quam, quia quis, fugit ipsa? Sit delectus perspiciatis impedit aliquam itaque accusantium aut, architecto explicabo, facere qui odit nesciunt, officiis culpa est hic repudiandae rem laborum ab unde officia! Eveniet totam nisi illo incidunt, omnis quibusdam laborum iste voluptas dolorum, rem distinctio deserunt quae unde ratione doloremque eos maxime, dicta officia magni beatae veritatis illum saepe hic. Quidem dolores quo porro at doloremque libero, quam modi? Voluptatem magni earum qui exercitationem! Corporis officia incidunt nihil, voluptatibus placeat aliquam dolore laboriosam minus, quos ipsam natus impedit laudantium illo. Numquam iste ipsa magnam obcaecati, eius dolore temporibus saepe tempore animi, consectetur alias voluptatibus nobis dolores recusandae cumque nostrum quo officiis consequuntur accusantium totam. Aspernatur, sapiente commodi iusto aperiam molestias voluptates eius officiis ullam obcaecati tenetur natus odio quod veritatis cum. Dignissimos illum id, temporibus ducimus doloremque molestiae expedita voluptates incidunt fugit alias. Necessitatibus voluptatum adipisci sequi ipsum pariatur sed, neque, labore quis magnam impedit odit, molestias laboriosam. Nam incidunt ea culpa non odio quam exercitationem aperiam dignissimos illum autem ex laborum eum, natus nemo. Consectetur autem repudiandae sint! Voluptate, quam? Ducimus sint quae facere praesentium fuga. Nemo cum, animi corporis facilis illo vitae commodi iste placeat distinctio saepe qui dicta eum totam sit nobis minima. Consequuntur cupiditate, ratione debitis officia accusamus ad saepe, distinctio necessitatibus eius perspiciatis vel corporis doloremque totam cum optio aut voluptatem reiciendis ipsam tempora, illo iusto sit. Ut, aut.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet veritatis ut soluta repellendus similique fugiat distinctio sequi ea beatae quidem.
+                    </p>
+                </div>
+                <div id="right-side">
+                    <div class="a1">Project-1</div>
+                    <div class="a2">Project-2</div>
+                    <div class="a3">Project-3</div>
+                </div>
+            </div>
+            <br><br><br>
+            <a name ="techno"></a>
+            <h1>Technologies Used</h1>
+            <br>
+            <div id="section4">
+
+                <!-- CARD 1 -->
+                <div class="box1">
+                    <div class="card">
+                        <img src="../images/html.png" alt="This is html image" class="images">
+                        <h4>Introduction to HTML</h4>
+                        <p class="discription">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique at quo aut! Repellendus doloremque adipisicing elitconsectetur voluptates enim eius nulla voluptatibus.
+                        </p>
+                        <a href="../Practicals/html.html" class="blockbutton">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="box2">
+                    <div class="card">
+                        <img src="../images/css.png" alt="This is css image" class="images">
+                        <h4>Introduction to CSS</h4>
+                        <p class="discription">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique at quo aut! Repellendus doloremque adipisicing elit consectetur voluptates enim eius nulla voluptatibus.
+                        </p>
+                        <a href="../Practicals/css.html" class="blockbutton">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="box3">
+                    <div class="card">
+                        <img src="../images/js.png" alt="This is jS image" class="images">
+                        <h4>Introduction to Javascript</h4>
+                        <p class="discription">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique at quo aut! Repellendus doloremque adipisicing elit consectetur voluptates enim eius nulla voluptatibus.
+                        </p>
+                        <a href="../Practicals/javascript.html" class="blockbutton">Read More</a>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="box4">
+                    <div class="card">
+                        <img src="../images/bootstrap.png" alt="This is boot image" class="images">
+                        <h4>Introduction to HTML</h4>
+                        <p class="discription">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique at quo aut! Repellendus doloremque adipisicing elit consectetur voluptates enim eius nulla voluptatibus.
+                        </p>
+                        <a href="../Practicals/bootstrap.html" class="blockbutton">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+        <a name ="contact"></a>
+        <h1>Contact</h1>
+        <br>
+        <div id="footer">
+            <br>
+            <p>Website Templete for Practical-8  <a href="https://www.beta-labs.in/"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Beta-Labs</a></p>
+            
+            <a href="#top"><i class="fa fa-backward" aria-hidden="true"></i> Back to top</a>
+        </div>
+    </div>
+
+</body>
+</html>
