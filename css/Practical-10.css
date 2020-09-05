@@ -1,0 +1,177 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    min-width: 250px;
+}
+
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+}
+
+#header img {
+    height: 70px;
+    margin-right: 15px;
+}
+
+#header h1 {
+    line-height: 70px;
+    font-size: 35px;
+    color: white;
+}
+
+#content {
+    padding: 15px;
+    margin-top: 80px;
+    transition: .9s;
+    float: right;
+}
+
+#content img {
+    width: 700px;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+}
+
+#content p {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 70px;
+    background-color: #353b48;
+    height: 100%;
+    width: 20%;
+    left: -100%;
+    transition: .7s;
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+#sidebar ul li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    padding: 15px 25px;
+    display: block;
+    transition: 0.4s;
+}
+
+a i {
+    margin-right: 20px;
+    width: 10%;
+}
+
+#sidebar ul li a:hover {
+    border-left: 10px solid white;
+}
+
+#social {
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    bottom: 0px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    width: 20%;
+}
+
+i {
+    font-size: 30px;
+    color: white;
+}
+
+#chk {
+    display: none;
+}
+
+#show-btn,
+#hide-btn {
+    position: fixed;
+    top: 18px;
+    left: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+#hide-btn {
+    display: none;
+}
+
+#chk:checked~#show-btn {
+    display: none;
+}
+
+#chk:checked~#hide-btn {
+    display: block;
+}
+
+#chk:checked~#content {
+    width: 80%;
+}
+
+#chk:checked~#sidebar {
+    left: 0;
+}
+
+
+/* Breakpoint-1 : Below 855 px */
+
+@media (max-width:855px) {
+    #header h1 {
+        display: none;
+    }
+    #sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    #social {
+        width: 100%;
+    }
+}
+
+
+/* Breakpoint-2 : Below 630 px */
+
+@media(max-width:630px) {
+    #content img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+/* Breakpoint-3 : Below 480 px */
+
+@media(max-width:480px) {
+    #content img {
+        width: 100%;
+        height: 250px;
+    }
+    #header img {
+        position: fixed;
+        right: 10px;
+    }
+}
