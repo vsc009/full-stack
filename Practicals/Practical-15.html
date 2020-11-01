@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        body {
+            background-color: grey;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin: 20px auto;
+            font-size: 45px;
+            text-decoration: underline;
+        }
+        
+        #container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        button {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            outline: none;
+            box-shadow: 1px 1px 2px 2px gray;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 25px;
+        }
+        
+        #counter {
+            color: yellow;
+            font-size: 60px;
+            margin: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>COUNTER</h1>
+    <div id="container">
+        <button id="dec" onclick="dec()">-</button>
+        <div id="counter">0</div>
+        <button id="inc" onclick="inc()">+</button>
+    </div>
+    <script>
+        var countervalue = parseInt(document.getElementById("counter").innerHTML);
+        var btn = document.getElementById("dec");
+        btn.disabled = true;
+
+        function inc() {
+            countervalue++;
+            document.getElementById("counter").innerHTML = countervalue;
+            btn.disabled = false;
+        }
+
+        function dec() {
+            countervalue--;
+            document.getElementById("counter").innerHTML = countervalue;
+            if (countervalue == 0) {
+                btn.disabled = true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
