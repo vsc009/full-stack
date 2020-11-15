@@ -38,18 +38,18 @@ function setGreeting() {
 
     if (hour < 12) {
         greeting.innerHTML = "Good Morning";
-        document.body.style.backgroundImage = 'url("../img/morning.jpg")';
+        document.body.style.backgroundImage = 'url("../imges/morning.jpg")';
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundPosition = "position";
     } else if (hour < 18) {
         greeting.innerHTML = "Good Afternoon";
-        document.body.style.backgroundImage = 'url("../img/afternoon.jpg")';
+        document.body.style.backgroundImage = 'url("../imges/afternoon.jpg")';
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundPosition = "position";
         document.body.style.color = "white";
     } else {
         greeting.innerHTML = "Good Evening";
-        document.body.style.backgroundImage = 'url("../img/evening.jpg")';
+        document.body.style.backgroundImage = 'url("../imges/evening.jpg")';
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundPosition = "position";
         document.body.style.color = "white";
