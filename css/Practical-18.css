@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslateblue;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 700px;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    width: 500px;
+    height: 100px;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    line-height: 100px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.form {
+    padding: 30px 20px;
+}
+
+.form-container {
+    position: relative;
+    padding-bottom: 18px;
+    margin: 15px 5px;
+    top: 0px;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+}
+
+input {
+    width: 430px;
+    height: 50px;
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+    border: 2px lightgray solid;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.form-container i {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.form-container small {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    font-size: 15px;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+button {
+    text-align: center;
+    width: 450px;
+    background-color: darkslateblue;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    border: none;
+    outline: none;
+}
+
+.form-container.success input {
+    border-color: rgb(42, 207, 48);
+}
+
+.form-container.success .fa-check-circle {
+    visibility: visible;
+    color: rgb(42, 207, 48);
+}
+
+.form-container.error input {
+    border-color: red;
+}
+
+.form-container.error .fa-exclamation-circle {
+    visibility: visible;
+    color: red;
+}
+
+.form-container.error small {
+    visibility: visible;
+    color: red;
+}
